@@ -41,5 +41,6 @@ npm install
      ```bash
      npx novu-labs@latest echo
     ```
+11. Ensure, you have set up an Email service provider on your Novu dashboard
 
     
