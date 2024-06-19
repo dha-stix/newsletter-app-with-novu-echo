@@ -1,7 +1,7 @@
-import { Echo } from "@novu/echo";
+import { Client, workflow } from "@novu/framework";
 import { renderEmail } from "@/emails";
 
-interface EchoProps {
+interface WorkflowProps {
 	step: any;
 	payload: {
 		subject: string;
@@ -9,14 +9,14 @@ interface EchoProps {
 		firstName: string
 	}
 }
-export const echo = new Echo({
+export const client = new Client({
 	apiKey: process.env.NEXT_PUBLIC_NOVU_API_KEY!,
-	devModeBypassAuthentication: process.env.NODE_ENV === "development",
+	strictAuthentication: process.env.NODE_ENV !== "development",
 });
 
-echo.workflow(
+export const emailWorkflow = workflow(
 	"newsletter",
-	async ({ step, payload }: EchoProps) => {
+	async ({ step, payload }: WorkflowProps) => {
 		await step.email(
 			"send-email",
 			async () => {

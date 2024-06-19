@@ -1,10 +1,10 @@
-## Newsletter App with Novu Echo, Firebase, and React Email
+## Newsletter App with Novu Framework, Firebase, and React Email
 
 ## Prerequisites
 1. [Firebase project](https://console.firebase.google.com/u/0/) with an active Firestore Database, and enabled Google, [GitHub](https://console.firebase.google.com/u/0), and Email & Password authentication methods.
 2. Access your [GitHub developer account.](https://github.com/settings/developers)
 3. [Novu account with an API Key](https://web.novu.co/).
-4. [Novu Echo](https://docs.novu.co/echo/quickstart#try-it-now)
+4. [Novu Framework](https://docs.novu.co/framework/quickstart#try-it-now)
 
 ## Getting Started
 
@@ -37,7 +37,7 @@ npm install
    ```bash.
     npm run dev
    ```
-10. Set up [Novu Echo](https://docs.novu.co/echo/quickstart#try-it-now) and the workflow URL is `<your_unique_url>/api/email`
+10. Set up [Dev Studio](https://docs.novu.co/framework/concepts/studio) and the workflow URL is `<your_unique_url>/api/email`
      ```bash
      npx novu-labs@latest echo
     ```
